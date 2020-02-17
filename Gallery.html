@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Personal Page JRH</title>
+    <link rel="stylesheet" href="gallery.css">
 </head>
 <body background="civil2.jpeg">
     <table border="0"width="100%"cellpadding="10">
@@ -13,29 +14,108 @@
             <td width="75%"colspan=3> <font size="40" color="blue"> GALLERY</font></td>
         </tr>
         <tr bgcolor="#F65109"> 
-            <td><a href="Personal Page JRH.html">Home</a></td>
-            <td><a href="About jrh.html">About jrh</a></td>
-            <td><a href="Gallery.html">Gallery</a></td>
-            <td><a href="Contact.html">Contact</a></td>
+            <td class="nav"><a href="Personal Page JRH.html">Home</a></td>
+            <td class="nav"><a href="About jrh.html">About jrh</a></td>
+            <td class="nav"><a href="Gallery.html">Gallery</a></td>
+            <td class="nav"><a href="Contact.html">Contact</a></td>
                 
         </tr>
-        <tr>
-            <td colspan=4>PROFESIONAL PICTURES</td>
-        </tr>
-        <tr>
-            <td colspan=4>FAMILIAR PICTURES</td>
-        </tr>
-        <tr>
-            <td colspan=4>TRAVEL PICTURES</td>
-        </tr>
         
-
-
-
-
-
-
     </table>
+
+     <img id="collage" src="collage.jpeg" alt="">
+        
+        
     
+        <h1>PROFESIONAL PICTURES</h1>
+
+        <img name="slider" width="600" height="350">
+
+        <script>
+            window.addEventListener('load', function() {
+                let images = [];
+                images[0] = 'image5.jpeg';
+                images[1] = 'image6.jpeg';
+                images[2] = 'image3.jpeg';
+                images[3] = 'image4.jpeg';
+                images[4] = 'image1.jpeg';
+                images[5] = 'image2.jpeg';
+
+                let indexImages = 0;
+                let time = 1500;
+
+                function changeImages() {
+                    document.slider.src = images[indexImages];
+                    if (indexImages < 5) {
+                        indexImages ++;
+                    } else {
+                        indexImages = 0;
+
+                    }
+                    
+                }
+                setInterval(changeImages, time);
+           });
+        </script> <br>
+        <h1>PROJECT PICTURES</h1>
+
+<img name="slider1" width="600" height="350">
+
+<script>
+    window.addEventListener('load', function() {
+        let images = [];
+        images[0] = 'img11.jpeg';
+        images[1] = 'img8.jpg';
+        images[2] = 'img9.jpg';
+        images[3] = 'img1.jpg';
+        images[4] = 'img10.jpeg';
+        
+    
+
+        let indexImages = 0;
+        let time = 2000;
+
+        function changeImages() {
+            document.slider1.src = images[indexImages];
+            if (indexImages < 4) {
+                indexImages ++;
+            } else {
+                indexImages = 0;
+
+            }
+            
+        }
+        setInterval(changeImages, time);
+   });
+</script> <br>
+<h1>EQUIPMENT PICTURES</h1>
+
+<img name="slider2" width="600" height="350">
+
+        <script>
+            window.addEventListener('load', function() {
+                let images = [];
+                images[0] = 'eqp.jpeg';
+                images[1] = 'img3.jpg';
+                images[2] = 'img6.jpg';
+                images[3] = 'img7.jpg';
+
+                let indexImages = 0;
+                let time = 1500;
+
+                function changeImages() {
+                    document.slider2.src = images[indexImages];
+                    if (indexImages < 3) {
+                        indexImages ++;
+                    } else {
+                        indexImages = 0;
+
+                    }
+                    
+                }
+                setInterval(changeImages, time);
+           });
+        </script>
+   <footer> <h2>Copyright. Created by Jose Rolando Heredia</h2></footer> 
 </body>
 </html>
